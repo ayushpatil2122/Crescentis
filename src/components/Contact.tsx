@@ -7,7 +7,7 @@ const Contact = () => {
   const [formStatus, setFormStatus] = useState('idle'); // idle, submitting, success, error
   const formRef = useRef<any>(null);
   
-  const handleSubmit = (e) => {
+  const handleSubmit = (e : any) => {
     e.preventDefault();
     setFormStatus('submitting');
     
@@ -208,7 +208,7 @@ const Contact = () => {
                   </label>
                   <textarea
                     id="message"
-                    rows="5"
+                    rows={5}
                     className="w-full bg-blue-900/20 border border-blue-500/30 rounded-lg px-4 py-3 text-blue-100 placeholder-blue-400/50 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent transition-all"
                     placeholder="Tell us about your project or inquiry..."
                     required
