@@ -20,7 +20,7 @@ const Blog = () => {
       comments: 24,
       image: "/api/placeholder/800/600",
       featured: true,
-      color: "#3B82F6" // blue
+      color: "#F59E0B" // amber
     },
     {
       id: 2,
@@ -33,7 +33,7 @@ const Blog = () => {
       comments: 18,
       image: "/api/placeholder/800/600",
       featured: false,
-      color: "#6366F1" // indigo
+      color: "#D97706" // amber-600
     },
     {
       id: 3,
@@ -46,7 +46,7 @@ const Blog = () => {
       comments: 31,
       image: "/api/placeholder/800/600",
       featured: false,
-      color: "#8B5CF6" // purple
+      color: "#B45309" // amber-700
     },
     {
       id: 4,
@@ -59,7 +59,7 @@ const Blog = () => {
       comments: 42,
       image: "/api/placeholder/800/600",
       featured: false,
-      color: "#EC4899" // pink
+      color: "#92400E" // amber-800
     },
     {
       id: 5,
@@ -72,7 +72,7 @@ const Blog = () => {
       comments: 15,
       image: "/api/placeholder/800/600",
       featured: false,
-      color: "#10B981" // green
+      color: "#78350F" // amber-900
     },
     {
       id: 6,
@@ -85,7 +85,7 @@ const Blog = () => {
       comments: 22,
       image: "/api/placeholder/800/600",
       featured: false,
-      color: "#F59E0B" // amber
+      color: "#FBBF24" // amber-300
     },
   ];
   
@@ -155,54 +155,54 @@ const Blog = () => {
       
       {/* Background animated elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-indigo-600/5 rounded-full blur-3xl"></div>
-        <div className="absolute -top-48 -right-48 w-96 h-96 bg-purple-600/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-1/4 w-96 h-96 bg-amber-600/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-yellow-600/5 rounded-full blur-3xl"></div>
+        <div className="absolute -top-48 -right-48 w-96 h-96 bg-orange-600/5 rounded-full blur-3xl"></div>
         
         {/* Animated grid lines */}
         <div className="absolute inset-0 opacity-10">
           <div className="grid grid-cols-12 h-full">
             {[...Array(12)].map((_, i) => (
-              <div key={i} className="border-l border-blue-500/20 h-full"></div>
+              <div key={i} className="border-l border-amber-500/20 h-full"></div>
             ))}
           </div>
           <div className="grid grid-rows-12 w-full h-full">
             {[...Array(12)].map((_, i) => (
-              <div key={i} className="border-t border-blue-500/20 w-full"></div>
+              <div key={i} className="border-t border-amber-500/20 w-full"></div>
             ))}
           </div>
         </div>
         
         {/* Floating elements */}
-        <div className="absolute top-1/4 left-1/5 w-3 h-3 bg-blue-400 rounded-full animate-float opacity-60"></div>
-        <div className="absolute top-2/3 right-1/5 w-4 h-4 bg-indigo-400 rounded-full animate-float-delayed opacity-60"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-5 h-5 bg-purple-400 rounded-full animate-float-slow opacity-60"></div>
+        <div className="absolute top-1/4 left-1/5 w-3 h-3 bg-amber-400 rounded-full animate-float opacity-60"></div>
+        <div className="absolute top-2/3 right-1/5 w-4 h-4 bg-yellow-400 rounded-full animate-float-delayed opacity-60"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-5 h-5 bg-orange-400 rounded-full animate-float-slow opacity-60"></div>
       </div>
       
       <div className="max-w-7xl mx-auto mb-16 px-4 relative">
-        <div className="absolute -top-16 -left-16 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl"></div>
-        <div className="absolute -bottom-16 -right-16 w-32 h-32 bg-indigo-500/10 rounded-full blur-2xl"></div>
+        <div className="absolute -top-16 -left-16 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl"></div>
+        <div className="absolute -bottom-16 -right-16 w-32 h-32 bg-yellow-500/10 rounded-full blur-2xl"></div>
         
-        <h1 className="text-6xl md:text-7xl font-bold text-center bg-gradient-to-r from-blue-100 via-blue-300 to-indigo-200 bg-clip-text text-transparent mb-6">
+        <h1 className="text-6xl md:text-7xl font-bold text-center bg-gradient-to-r from-amber-100 via-amber-300 to-yellow-200 bg-clip-text text-transparent mb-6">
           Our Blog
         </h1>
         
-        <p className="text-2xl text-blue-100 text-center mt-8 max-w-3xl mx-auto opacity-90">
+        <p className="text-2xl text-amber-100 text-center mt-8 max-w-3xl mx-auto opacity-90">
           Insights, perspectives, and news from our tech experts
         </p>
         
         <div className="flex justify-center mt-8 gap-4 flex-wrap">
-          <div className="flex items-center bg-blue-900/30 backdrop-blur-md px-6 py-3 rounded-full border border-blue-500/20">
-            <div className="w-3 h-3 bg-blue-400 rounded-full mr-2 animate-pulse"></div>
-            <span className="text-blue-200">Weekly Updates</span>
+          <div className="flex items-center bg-amber-900/30 backdrop-blur-md px-6 py-3 rounded-full border border-amber-500/20">
+            <div className="w-3 h-3 bg-amber-400 rounded-full mr-2 animate-pulse"></div>
+            <span className="text-amber-200">Weekly Updates</span>
           </div>
-          <div className="flex items-center bg-blue-900/30 backdrop-blur-md px-6 py-3 rounded-full border border-blue-500/20">
-            <div className="w-3 h-3 bg-indigo-400 rounded-full mr-2 animate-pulse"></div>
-            <span className="text-blue-200">Industry Insights</span>
+          <div className="flex items-center bg-amber-900/30 backdrop-blur-md px-6 py-3 rounded-full border border-amber-500/20">
+            <div className="w-3 h-3 bg-yellow-400 rounded-full mr-2 animate-pulse"></div>
+            <span className="text-amber-200">Industry Insights</span>
           </div>
-          <div className="flex items-center bg-blue-900/30 backdrop-blur-md px-6 py-3 rounded-full border border-blue-500/20">
-            <div className="w-3 h-3 bg-purple-400 rounded-full mr-2 animate-pulse"></div>
-            <span className="text-blue-200">Tech Trends</span>
+          <div className="flex items-center bg-amber-900/30 backdrop-blur-md px-6 py-3 rounded-full border border-amber-500/20">
+            <div className="w-3 h-3 bg-orange-400 rounded-full mr-2 animate-pulse"></div>
+            <span className="text-amber-200">Tech Trends</span>
           </div>
         </div>
         
@@ -210,19 +210,19 @@ const Blog = () => {
         <div className="mt-12 flex flex-col md:flex-row gap-4 justify-between items-center">
           <div className="w-full md:w-1/2 relative">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <Search className="h-5 w-5 text-blue-400" />
+              <Search className="h-5 w-5 text-amber-400" />
             </div>
             <input 
               type="text" 
               placeholder="Search articles..."
-              className="w-full bg-blue-900/20 border border-blue-500/30 rounded-lg py-3 pl-10 pr-4 text-blue-100 placeholder-blue-300/50 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all"
+              className="w-full bg-amber-900/20 border border-amber-500/30 rounded-lg py-3 pl-10 pr-4 text-amber-100 placeholder-amber-300/50 focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500/50 transition-all"
             />
           </div>
           
-          <div className="w-full md:w-auto flex items-center gap-2 bg-blue-900/20 border border-blue-500/30 rounded-lg p-2">
-            <Filter className="h-5 w-5 text-blue-400 ml-2" />
-            <span className="text-blue-200 mr-2">Filter by:</span>
-            <select className="bg-blue-900/40 border border-blue-500/30 rounded-md py-2 px-3 text-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500/50">
+          <div className="w-full md:w-auto flex items-center gap-2 bg-amber-900/20 border border-amber-500/30 rounded-lg p-2">
+            <Filter className="h-5 w-5 text-amber-400 ml-2" />
+            <span className="text-amber-200 mr-2">Filter by:</span>
+            <select className="bg-amber-900/40 border border-amber-500/30 rounded-md py-2 px-3 text-amber-100 focus:outline-none focus:ring-2 focus:ring-amber-500/50">
               <option>Most Recent</option>
               <option>Most Popular</option>
               <option>Most Commented</option>
@@ -239,8 +239,8 @@ const Blog = () => {
               key={category}
               className={`px-5 py-3 rounded-full transition-all ${
                 activeCategoryTab === category
-                  ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg shadow-blue-500/30'
-                  : 'bg-blue-900/20 text-blue-300 hover:bg-blue-800/30 border border-blue-500/20'
+                  ? 'bg-gradient-to-r from-amber-600 to-yellow-600 text-white shadow-lg shadow-amber-500/30'
+                  : 'bg-amber-900/20 text-amber-300 hover:bg-amber-800/30 border border-amber-500/20'
               }`}
               onClick={() => setActiveCategoryTab(category)}
             >
@@ -260,48 +260,48 @@ const Blog = () => {
               onMouseEnter={() => setFeaturedHovered(true)}
               onMouseLeave={() => setFeaturedHovered(false)}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-2xl transform group-hover:scale-[1.01] transition-all duration-300"></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 to-indigo-900/90 opacity-90 rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-600/20 to-yellow-600/20 rounded-2xl transform group-hover:scale-[1.01] transition-all duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-900/70 to-yellow-900/90 opacity-90 rounded-2xl"></div>
               
-              <div className="relative rounded-2xl overflow-hidden border border-blue-500/30 group-hover:border-blue-400/50 transition-all shadow-xl shadow-blue-800/20 backdrop-blur-lg">
+              <div className="relative rounded-2xl overflow-hidden border border-amber-500/30 group-hover:border-amber-400/50 transition-all shadow-xl shadow-amber-800/20 backdrop-blur-lg">
                 <div className="px-8 py-10 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                   <div>
                     <div className="flex items-center gap-2 mb-6">
-                      <div className="bg-blue-700/50 text-blue-200 px-4 py-1 rounded-full text-sm font-medium">Featured</div>
-                      <div className="bg-blue-800/30 text-blue-300 px-4 py-1 rounded-full text-sm">{post.category}</div>
+                      <div className="bg-amber-700/50 text-amber-200 px-4 py-1 rounded-full text-sm font-medium">Featured</div>
+                      <div className="bg-amber-800/30 text-amber-300 px-4 py-1 rounded-full text-sm">{post.category}</div>
                     </div>
                     
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{post.title}</h2>
-                    <p className="text-blue-100 text-lg mb-6">{post.excerpt}</p>
+                    <p className="text-amber-100 text-lg mb-6">{post.excerpt}</p>
                     
                     <div className="flex flex-wrap items-center gap-6 mb-8">
                       <div className="flex items-center gap-2">
-                        <User className="h-4 w-4 text-blue-400" />
-                        <span className="text-blue-200">{post.author}</span>
+                        <User className="h-4 w-4 text-amber-400" />
+                        <span className="text-amber-200">{post.author}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <Calendar className="h-4 w-4 text-blue-400" />
-                        <span className="text-blue-200">{post.date}</span>
+                        <Calendar className="h-4 w-4 text-amber-400" />
+                        <span className="text-amber-200">{post.date}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <Clock className="h-4 w-4 text-blue-400" />
-                        <span className="text-blue-200">{post.readTime}</span>
+                        <Clock className="h-4 w-4 text-amber-400" />
+                        <span className="text-amber-200">{post.readTime}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <MessageSquare className="h-4 w-4 text-blue-400" />
-                        <span className="text-blue-200">{post.comments} comments</span>
+                        <MessageSquare className="h-4 w-4 text-amber-400" />
+                        <span className="text-amber-200">{post.comments} comments</span>
                       </div>
                     </div>
                     
-                    <button className="px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 shadow-lg shadow-blue-500/30 transition-all duration-300 flex items-center justify-center gap-2 group/btn">
+                    <button className="px-6 py-3 rounded-full bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 shadow-lg shadow-amber-500/30 transition-all duration-300 flex items-center justify-center gap-2 group/btn">
                       <span>Read Article</span>
                       <ArrowRight className={`h-5 w-5 transition-transform duration-300 ${featuredHovered ? 'translate-x-1' : ''}`} />
                     </button>
                   </div>
                   
                   <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-600/40 to-indigo-600/40 rounded-xl opacity-60"></div>
-                    <div className="rounded-xl overflow-hidden border border-blue-400/30 transform transition-transform duration-300 group-hover:scale-[1.02]">
+                    <div className="absolute inset-0 bg-gradient-to-br from-amber-600/40 to-yellow-600/40 rounded-xl opacity-60"></div>
+                    <div className="rounded-xl overflow-hidden border border-amber-400/30 transform transition-transform duration-300 group-hover:scale-[1.02]">
                       <img 
                         src={post.image} 
                         alt={post.title}
@@ -310,8 +310,8 @@ const Blog = () => {
                     </div>
                     
                     {/* Floating elements around the image */}
-                    <div className="absolute -top-4 -right-4 w-12 h-12 bg-blue-600/20 rounded-full blur-xl animate-pulse-glow"></div>
-                    <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-indigo-600/20 rounded-full blur-xl animate-pulse-glow"></div>
+                    <div className="absolute -top-4 -right-4 w-12 h-12 bg-amber-600/20 rounded-full blur-xl animate-pulse-glow"></div>
+                    <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-yellow-600/20 rounded-full blur-xl animate-pulse-glow"></div>
                   </div>
                 </div>
               </div>
@@ -326,7 +326,7 @@ const Blog = () => {
           {filteredPosts.filter(post => !post.featured).map(post => (
             <div 
               key={post.id}
-              className="bg-gradient-to-br from-blue-900/20 to-indigo-900/10 backdrop-blur-md rounded-xl border border-blue-500/20 overflow-hidden shadow-lg shadow-blue-900/10 group hover:shadow-blue-500/30 hover:border-blue-400/40 hover:scale-[1.02] transition-all duration-300 cursor-pointer"
+              className="bg-gradient-to-br from-amber-900/20 to-yellow-900/10 backdrop-blur-md rounded-xl border border-amber-500/20 overflow-hidden shadow-lg shadow-amber-900/10 group hover:shadow-amber-500/30 hover:border-amber-400/40 hover:scale-[1.02] transition-all duration-300 cursor-pointer"
             >
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60 z-10"></div>
@@ -345,39 +345,39 @@ const Blog = () => {
                 </div>
                 
                 <div className="absolute top-4 right-4 z-20">
-                  <div className="bg-black/30 backdrop-blur-md p-2 rounded-full text-blue-200 cursor-pointer hover:bg-black/50 transition-all">
+                  <div className="bg-black/30 backdrop-blur-md p-2 rounded-full text-amber-200 cursor-pointer hover:bg-black/50 transition-all">
                     <BookmarkPlus className="h-5 w-5" />
                   </div>
                 </div>
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-bold text-blue-100 mb-3 line-clamp-2 group-hover:text-white transition-colors">
+                <h3 className="text-xl font-bold text-amber-100 mb-3 line-clamp-2 group-hover:text-white transition-colors">
                   {post.title}
                 </h3>
                 
-                <p className="text-blue-200/90 text-sm mb-4 line-clamp-3">
+                <p className="text-amber-200/90 text-sm mb-4 line-clamp-3">
                   {post.excerpt}
                 </p>
                 
                 <div className="flex justify-between items-center mb-4">
                   <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-gray-700 to-blue-900 flex items-center justify-center">
-                      <User className="h-4 w-4 text-blue-300" />
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-gray-700 to-amber-900 flex items-center justify-center">
+                      <User className="h-4 w-4 text-amber-300" />
                     </div>
-                    <span className="text-blue-300 text-sm">{post.author}</span>
+                    <span className="text-amber-300 text-sm">{post.author}</span>
                   </div>
                   
                   <div className="flex items-center gap-1">
-                    <Clock className="h-4 w-4 text-blue-400" />
-                    <span className="text-blue-300 text-sm">{post.readTime}</span>
+                    <Clock className="h-4 w-4 text-amber-400" />
+                    <span className="text-amber-300 text-sm">{post.readTime}</span>
                   </div>
                 </div>
                 
                 <div className="flex justify-between items-center">
-                  <div className="text-blue-300/80 text-sm">{post.date}</div>
+                  <div className="text-amber-300/80 text-sm">{post.date}</div>
                   
-                  <div className="flex items-center text-blue-300 text-sm gap-1 group-hover:translate-x-1 transition-transform">
+                  <div className="flex items-center text-amber-300 text-sm gap-1 group-hover:translate-x-1 transition-transform">
                     <span>Read More</span>
                     <ChevronRight className="h-4 w-4" />
                   </div>
@@ -390,29 +390,29 @@ const Blog = () => {
         {/* Pagination */}
         <div className="mt-16 flex justify-center">
           <div className="flex items-center gap-2">
-            <button className="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center text-blue-300 border border-blue-500/20 hover:bg-blue-800/40 transition-all">
+            <button className="w-10 h-10 rounded-full bg-amber-900/30 flex items-center justify-center text-amber-300 border border-amber-500/20 hover:bg-amber-800/40 transition-all">
               <ArrowRight className="h-5 w-5 transform rotate-180" />
             </button>
             
-            <button className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center text-white shadow-lg shadow-blue-500/20">
+            <button className="w-10 h-10 rounded-full bg-gradient-to-r from-amber-500 to-yellow-600 flex items-center justify-center text-white shadow-lg shadow-amber-500/20">
               1
             </button>
             
-            <button className="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center text-blue-300 border border-blue-500/20 hover:bg-blue-800/40 transition-all">
+            <button className="w-10 h-10 rounded-full bg-amber-900/30 flex items-center justify-center text-amber-300 border border-amber-500/20 hover:bg-amber-800/40 transition-all">
               2
             </button>
             
-            <button className="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center text-blue-300 border border-blue-500/20 hover:bg-blue-800/40 transition-all">
+            <button className="w-10 h-10 rounded-full bg-amber-900/30 flex items-center justify-center text-amber-300 border border-amber-500/20 hover:bg-amber-800/40 transition-all">
               3
             </button>
             
-            <div className="text-blue-300 px-2">...</div>
+            <div className="text-amber-300 px-2">...</div>
             
-            <button className="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center text-blue-300 border border-blue-500/20 hover:bg-blue-800/40 transition-all">
+            <button className="w-10 h-10 rounded-full bg-amber-900/30 flex items-center justify-center text-amber-300 border border-amber-500/20 hover:bg-amber-800/40 transition-all">
               10
             </button>
             
-            <button className="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center text-blue-300 border border-blue-500/20 hover:bg-blue-800/40 transition-all">
+            <button className="w-10 h-10 rounded-full bg-amber-900/30 flex items-center justify-center text-amber-300 border border-amber-500/20 hover:bg-amber-800/40 transition-all">
               <ArrowRight className="h-5 w-5" />
             </button>
           </div>
@@ -421,20 +421,20 @@ const Blog = () => {
       
       {/* Newsletter section */}
       <div className="max-w-5xl mx-auto mt-24 mb-8 px-4">
-        <div className="relative rounded-2xl overflow-hidden border border-blue-500/30 shadow-xl shadow-blue-800/20 backdrop-blur-lg">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 to-indigo-900/90 opacity-90"></div>
+        <div className="relative rounded-2xl overflow-hidden border border-amber-500/30 shadow-xl shadow-amber-800/20 backdrop-blur-lg">
+          <div className="absolute inset-0 bg-gradient-to-br from-amber-900/70 to-yellow-900/90 opacity-90"></div>
           
           {/* Background elements */}
-          <div className="absolute -top-24 -right-24 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute -top-24 -right-24 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-yellow-500/10 rounded-full blur-3xl"></div>
           
           <div className="relative p-8 md:p-12 text-center">
-            <div className="inline-block bg-blue-900/50 rounded-full p-4 mb-6">
-              <Star className="h-8 w-8 text-blue-300" />
+            <div className="inline-block bg-amber-900/50 rounded-full p-4 mb-6">
+              <Star className="h-8 w-8 text-amber-300" />
             </div>
             
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Stay Updated</h3>
-            <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-amber-100 text-lg mb-8 max-w-2xl mx-auto">
               Subscribe to our newsletter to receive the latest insights, articles, and tech news delivered straight to your inbox.
             </p>
             
@@ -442,16 +442,16 @@ const Blog = () => {
               <input 
                 type="email" 
                 placeholder="Enter your email"
-                className="flex-1 bg-blue-900/30 border border-blue-500/30 rounded-lg py-3 px-4 text-blue-100 placeholder-blue-300/50 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all"
+                className="flex-1 bg-amber-900/30 border border-amber-500/30 rounded-lg py-3 px-4 text-amber-100 placeholder-amber-300/50 focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500/50 transition-all"
               />
               
-              <button className="px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 shadow-lg shadow-blue-500/30 transition-all duration-300 flex items-center justify-center gap-2 group">
+              <button className="px-6 py-3 rounded-lg bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 shadow-lg shadow-amber-500/30 transition-all duration-300 flex items-center justify-center gap-2 group">
                 <span>Subscribe</span>
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
             
-            <p className="text-blue-300/80 text-sm mt-4">
+            <p className="text-amber-300/80 text-sm mt-4">
               We respect your privacy. Unsubscribe at any time.
             </p>
           </div>
@@ -459,8 +459,8 @@ const Blog = () => {
       </div>
       
       {/* Gradient overlays at the edges */}
-      <div className="absolute top-0 left-0 w-36 h-36 bg-gradient-to-br from-blue-500/5 to-transparent blur-2xl"></div>
-      <div className="absolute bottom-0 right-0 w-36 h-36 bg-gradient-to-br from-indigo-500/5 to-transparent blur-2xl"></div>
+      <div className="absolute top-0 left-0 w-36 h-36 bg-gradient-to-br from-amber-500/5 to-transparent blur-2xl"></div>
+      <div className="absolute bottom-0 right-0 w-36 h-36 bg-gradient-to-br from-yellow-500/5 to-transparent blur-2xl"></div>
     </section>
   );
 };

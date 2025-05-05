@@ -8,6 +8,6 @@ export default function page() {
         <Hero/>
         <Services/>
         <Partners/>
-        <Testimonials/>        
+        {/* <Testimonials/>         */}
     </div>
 }

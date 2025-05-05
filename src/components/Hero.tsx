@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
 
 export default function Hero() {
@@ -54,7 +55,7 @@ export default function Hero() {
           shape: Math.random() > 0.5 ? "circle" : "square",
           rotation: Math.random() * Math.PI * 2,
           rotationSpeed: (Math.random() - 0.5) * 0.01,
-          color: Math.random() > 0.5 ? "rgba(100, 149, 237, opacity)" : "rgba(138, 43, 226, opacity)",
+          color: Math.random() > 0.5 ? "rgba(255, 215, 0, opacity)" : "rgba(255, 165, 0, opacity)",
         })
       }
     }
@@ -139,9 +140,9 @@ export default function Hero() {
 
       const moonGradient = ctx.createRadialGradient(moonX, moonY, 0, moonX, moonY, moonRadius)
 
-      moonGradient.addColorStop(0, "rgba(240, 240, 240, 1)")
-      moonGradient.addColorStop(0.5, "rgba(220, 220, 220, 1)")
-      moonGradient.addColorStop(1, "rgba(180, 180, 200, 1)")
+      moonGradient.addColorStop(0, "rgba(255, 255, 220, 1)")
+      moonGradient.addColorStop(0.5, "rgba(255, 250, 205, 1)")
+      moonGradient.addColorStop(1, "rgba(255, 235, 180, 1)")
 
       ctx.beginPath()
       ctx.arc(moonX, moonY, moonRadius, 0, Math.PI * 2)
@@ -157,15 +158,15 @@ export default function Hero() {
       craters.forEach((crater) => {
         ctx.beginPath()
         ctx.arc(crater.x, crater.y, crater.r, 0, Math.PI * 2)
-        ctx.fillStyle = "rgba(150, 150, 170, 0.15)"
+        ctx.fillStyle = "rgba(255, 230, 150, 0.15)"
         ctx.fill()
       })
 
       ctx.beginPath()
       ctx.arc(moonX, moonY, moonRadius * 1.2, 0, Math.PI * 2)
       const glowGradient = ctx.createRadialGradient(moonX, moonY, moonRadius, moonX, moonY, moonRadius * 1.2)
-      glowGradient.addColorStop(0, "rgba(210, 230, 255, 0.2)")
-      glowGradient.addColorStop(1, "rgba(210, 230, 255, 0)")
+      glowGradient.addColorStop(0, "rgba(255, 245, 200, 0.2)")
+      glowGradient.addColorStop(1, "rgba(255, 245, 200, 0)")
       ctx.fillStyle = glowGradient
       ctx.fill()
 
@@ -178,9 +179,9 @@ export default function Hero() {
 
       // Create several nebula clouds
       const nebulaPoints = [
-        { x: width * 0.2, y: height * 0.3, radius: Math.min(width, height) * 0.3, color: "rgba(66, 99, 235, 0.05)" },
-        { x: width * 0.7, y: height * 0.6, radius: Math.min(width, height) * 0.25, color: "rgba(138, 43, 226, 0.04)" },
-        { x: width * 0.4, y: height * 0.8, radius: Math.min(width, height) * 0.2, color: "rgba(30, 144, 255, 0.03)" },
+        { x: width * 0.2, y: height * 0.3, radius: Math.min(width, height) * 0.3, color: "rgba(255, 215, 0, 0.05)" },
+        { x: width * 0.7, y: height * 0.6, radius: Math.min(width, height) * 0.25, color: "rgba(255, 165, 0, 0.04)" },
+        { x: width * 0.4, y: height * 0.8, radius: Math.min(width, height) * 0.2, color: "rgba(255, 190, 0, 0.03)" },
       ]
 
       nebulaPoints.forEach((nebula) => {
@@ -212,8 +213,8 @@ export default function Hero() {
         // Create gradient for the meteor trail
         const gradient = ctx.createLinearGradient(meteor.x, meteor.y, tailX, tailY)
         gradient.addColorStop(0, `rgba(255, 255, 255, ${meteor.opacity})`)
-        gradient.addColorStop(0.3, `rgba(100, 149, 237, ${meteor.opacity * 0.6})`)
-        gradient.addColorStop(1, `rgba(100, 149, 237, 0)`)
+        gradient.addColorStop(0.3, `rgba(255, 215, 0, ${meteor.opacity * 0.6})`)
+        gradient.addColorStop(1, `rgba(255, 215, 0, 0)`)
 
         ctx.beginPath()
         ctx.moveTo(meteor.x, meteor.y)
@@ -310,8 +311,8 @@ export default function Hero() {
           100,
         )
 
-        gradient.addColorStop(0, "rgba(100, 149, 237, 0.05)")
-        gradient.addColorStop(1, "rgba(100, 149, 237, 0)")
+        gradient.addColorStop(0, "rgba(255, 215, 0, 0.05)")
+        gradient.addColorStop(1, "rgba(255, 215, 0, 0)")
 
         ctx.beginPath()
         ctx.arc(mousePosition.x, mousePosition.y, 100, 0, Math.PI * 2)
@@ -326,9 +327,9 @@ export default function Hero() {
       ctx.clearRect(0, 0, width, height)
 
       const bgGradient = ctx.createLinearGradient(0, 0, 0, height)
-      bgGradient.addColorStop(0, "#000814")
-      bgGradient.addColorStop(0.5, "#001233")
-      bgGradient.addColorStop(1, "#001440")
+      bgGradient.addColorStop(0, "#140e00")
+      bgGradient.addColorStop(0.5, "#201500")
+      bgGradient.addColorStop(1, "#331f00")
       ctx.fillStyle = bgGradient
       ctx.fillRect(0, 0, width, height)
 
@@ -398,19 +399,22 @@ export default function Hero() {
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full z-0" />
 
       <main className="relative z-10 flex flex-col items-center justify-center text-center h-[80vh] px-4">
-        <h1 className="text-7xl md:text-9xl font-bold mb-6 bg-gradient-to-r from-blue-100 via-blue-300 to-indigo-200 bg-clip-text text-transparent drop-shadow-xl">
+        <h1 className="text-7xl md:text-9xl font-bold mb-6 bg-gradient-to-r from-yellow-100 via-yellow-300 to-amber-200 bg-clip-text text-transparent drop-shadow-xl">
           Crescentis
         </h1>
-        <p className="text-xl md:text-2xl mb-10 max-w-xl text-blue-100">
+        <p className="text-xl md:text-2xl mb-10 max-w-xl text-yellow-100">
           The most powerful AI ever deployed in talent acquisition
         </p>
         <div className="flex flex-col md:flex-row gap-4">
           <button
-            className={`px-8 py-4 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 shadow-lg ${startButtonHovered ? "shadow-blue-500/50" : "shadow-blue-500/20"} transition-all duration-300 flex items-center justify-center gap-2 group`}
+            className={`px-8 py-4 rounded-full bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 shadow-lg ${startButtonHovered ? "shadow-yellow-500/50" : "shadow-yellow-500/20"} transition-all duration-300 flex items-center justify-center gap-2 group`}
             onMouseEnter={() => setStartButtonHovered(true)}
             onMouseLeave={() => setStartButtonHovered(false)}
           >
+            <Link href={"/contact"}>
             <span>Get Started</span>
+            </Link>
+            
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className={`h-5 w-5 transition-transform duration-300 ${startButtonHovered ? "translate-x-2" : ""}`}
@@ -424,39 +428,20 @@ export default function Hero() {
               />
             </svg>
           </button>
-          <button
-            className={`px-8 py-4 rounded-full border border-blue-300/30 bg-blue-500/10 hover:bg-blue-500/20 backdrop-blur-sm transition-all duration-300 flex items-center justify-center gap-2 ${demoButtonHovered ? "shadow-lg shadow-blue-500/20" : ""}`}
-            onMouseEnter={() => setDemoButtonHovered(true)}
-            onMouseLeave={() => setDemoButtonHovered(false)}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className={`h-5 w-5 transition-transform duration-300 ${demoButtonHovered ? "scale-125" : ""}`}
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                clipRule="evenodd"
-              />
-            </svg>
-            <span>Watch Demo</span>
-          </button>
         </div>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl w-full px-4">
-          <div className="bg-blue-900/20 backdrop-blur-md p-6 rounded-xl border border-blue-500/10 transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20">
-            <h3 className="text-4xl font-bold text-blue-300">{stats.placementRate}%</h3>
-            <p className="text-blue-100 mt-2">Placement Success Rate</p>
+          <div className="bg-yellow-900/20 backdrop-blur-md p-6 rounded-xl border border-yellow-500/10 transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/20">
+            <h3 className="text-4xl font-bold text-yellow-300">{stats.placementRate}%</h3>
+            <p className="text-yellow-100 mt-2">Placement Success Rate</p>
           </div>
-          <div className="bg-blue-900/20 backdrop-blur-md p-6 rounded-xl border border-blue-500/10 transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20">
-            <h3 className="text-4xl font-bold text-blue-300">{stats.companies.toLocaleString()}+</h3>
-            <p className="text-blue-100 mt-2">Companies Trust Us</p>
+          <div className="bg-yellow-900/20 backdrop-blur-md p-6 rounded-xl border border-yellow-500/10 transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/20">
+            <h3 className="text-4xl font-bold text-yellow-300">{stats.companies.toLocaleString()}+</h3>
+            <p className="text-yellow-100 mt-2">Companies Trust Us</p>
           </div>
-          <div className="bg-blue-900/20 backdrop-blur-md p-6 rounded-xl border border-blue-500/10 transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20">
-            <h3 className="text-4xl font-bold text-blue-300">{stats.placementTime}hrs</h3>
-            <p className="text-blue-100 mt-2">Average Placement Time</p>
+          <div className="bg-yellow-900/20 backdrop-blur-md p-6 rounded-xl border border-yellow-500/10 transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/20">
+            <h3 className="text-4xl font-bold text-yellow-300">{stats.placementTime}hrs</h3>
+            <p className="text-yellow-100 mt-2">Average Placement Time</p>
           </div>
         </div>
       </main>
